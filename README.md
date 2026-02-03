@@ -1,36 +1,54 @@
-# Epstein DOJ DataSet 9 - Pagination Analysis & Archive Tools
+# Epstein DOJ Dataset 9 - Evidence of Targeted Document Removal
 
-Mission: Exhaustive analysis of DOJ Epstein Files DataSet 9 pagination to identify gaps, document anomalies, and preserve evidence.
+## Key Finding: Three Files Removed from Two Processing Batches
 
-## Key Findings (Feb 2-3, 2026)
+Three files are listed in DOJ's Dataset 9 pagination but cannot be accessed from either the DOJ website or the 86GB public torrent. Adjacent file analysis reveals:
 
-### 3 Files Appear to be Scrubbed
+**All three files cluster around the same event**: Karyna Shuliak's April 2016 departure from St. Thomas, U.S. Virgin Islands—the departure point for Epstein's Little St. James island.
 
-These files are listed in DOJ pagination but cannot be downloaded:
+**Two of the missing files appear in separate processing batches ~208,000 files apart**:
 
-- EFTA00326497 - Returns error page
-- EFTA00326501 - Returns error page  
-- EFTA00534391 - Returns error page
+| Redacted Batch | Unredacted Batch | Status |
+|----------------|------------------|--------|
+| EFTA00326497 | EFTA00534391 | Both MISSING |
 
-These files are NOT in any public torrent. This is potential evidence of document removal.
+The same logical document is missing from both a redacted version (326xxx range) and an unredacted version (534xxx range), processed in completely separate batches. Random file corruption does not affect the same document across two processing runs indexed hundreds of thousands of positions apart.
 
-### The Torrent (87 GB) is More Complete Than DOJ Website
+**The missing file 534391 sits immediately before a personal Epstein email** recommending a novel with a sympathetic pedophile protagonist—two days before the book's public release.
 
-- DOJ Website (13,000 pages scraped): 77,766 files
-- 86GB Torrent: 531,256 files
-- DOJ-only files (not in torrent): 3 (all inaccessible)
+See [ADJACENT_FILE_ANALYSIS.md](ADJACENT_FILE_ANALYSIS.md) for full investigation.
 
-The DOJ website only exposes ~15% of Dataset 9's actual contents.
+---
 
-### Pagination Limit Discovered
+## The Missing Files
 
-The DOJ pagination has an exact limit: page 184,467,440,737,095,516
+| EFTA | DOJ Website | Torrent | Adjacent Content |
+|------|-------------|---------|------------------|
+| 00326497 | Error page | Missing | Between AmEx confirmation and Groff forward |
+| 00326501 | Error page | Missing | Between forward and Shuliak reply |
+| 00534391 | Error page | Missing | Immediately before Epstein personal email |
 
-This is exactly 2^64 / 100 (max unsigned 64-bit integer divided by 100).
+Try them yourself:
+- https://www.justice.gov/epstein/files/DataSet%209/EFTA00326497.pdf
+- https://www.justice.gov/epstein/files/DataSet%209/EFTA00326501.pdf
+- https://www.justice.gov/epstein/files/DataSet%209/EFTA00534391.pdf
 
-The pagination is an infinite loop - the same ~77k files cycle forever across 184 quadrillion pages. No hidden content exists at extreme page numbers.
+---
 
-## EFTA Ranges by Page Band
+## Secondary Finding: DOJ Website Hides 85% of Dataset
+
+| Source | Files | Coverage |
+|--------|-------|----------|
+| DOJ Website (13,000 pages scraped) | 77,766 | ~15% |
+| 86GB Torrent | 531,256 | ~100% |
+
+The DOJ's pagination system is broken—an infinite loop cycling the same files. We found the exact limit: **page 184,467,440,737,095,516** (2^64 / 100). Even at page 900 quadrillion, it returns the same content as page 0.
+
+Anyone relying solely on the DOJ website is missing 85% of Dataset 9.
+
+---
+
+## EFTA Distribution by Page Range
 
 ```
 Page Range    Min EFTA       Max EFTA       New Files
@@ -57,131 +75,56 @@ Page Range    Min EFTA       Max EFTA       New Files
 10000-10499   EFTA00140897   EFTA01262781   240
 10500-12999   (no new files - all wraps/redundant)
 
-TOTAL UNIQUE FILES: 77,766
+TOTAL UNIQUE FILES ON DOJ WEBSITE: 77,766
+TOTAL FILES IN TORRENT: 531,256
 ```
-
-## Quick Start
-
-```bash
-cd scraper
-pip install -r requirements.txt
-
-# Run the sequential scraper
-python scrape_doj_manifest.py
-
-# Random exploration probe
-python exploration_probe.py --random-only --samples 100
-
-# Find the exact pagination limit
-python find_exact_end.py
-
-# Scrape backwards from the end
-python scrape_from_end.py
-
-# Mitnick-style pattern probe
-python mitnick_probe.py
-```
-
-## Project Structure
-
-```
-.
-├── scraper/
-│   ├── scrape_doj_manifest.py    # Main sequential pagination scraper
-│   ├── exploration_probe.py      # Random page exploration
-│   ├── find_exact_end.py         # Binary search for pagination limit
-│   ├── find_pagination_end.py    # Initial exponential probe
-│   ├── scrape_from_end.py        # Backwards scraper from limit
-│   ├── mitnick_probe.py          # Hacker-pattern exploration
-│   ├── visualize_pagination.py   # Data visualization
-│   ├── inventory_torrent.py      # Torrent file lister
-│   ├── download_gaps.py          # Gap downloader
-│   └── requirements.txt
-├── manifests/
-│   ├── doj_dataset9_manifest.txt    # 77,766 unique files from DOJ
-│   ├── torrent_manifest.txt         # 531,256 files in torrent
-│   ├── doj_not_in_torrent.txt       # 3 inaccessible files
-│   ├── scraper_checkpoint.json      # Scraper state/resume data
-│   ├── pagination_index.json        # Full pagination structure
-│   ├── probe_results.json           # Random probe results
-│   ├── pagination_exact_end.json    # Limit search results
-│   └── mitnick_probe_results.json   # Pattern probe results
-├── Dataset Diff Plan/
-│   ├── FINDINGS_SUMMARY.md          # Comprehensive analysis
-│   └── INACCESSIBLE_FILES.txt       # The 3 scrubbed files
-├── FINAL_REDDIT_POST.txt            # Ready-to-post findings
-└── README.md
-```
-
-## Scripts
-
-### scrape_doj_manifest.py
-
-Main sequential scraper - handles chaotic pagination with deduplication.
-
-```bash
-python scrape_doj_manifest.py              # Fresh start
-python scrape_doj_manifest.py --resume     # Resume from checkpoint
-python scrape_doj_manifest.py --fresh      # Force fresh start
-```
-
-### exploration_probe.py
-
-Random sampling across huge page ranges.
-
-```bash
-python exploration_probe.py --random-only --samples 100
-python exploration_probe.py --resume
-```
-
-### find_exact_end.py
-
-Binary search to find exact pagination boundary.
-
-```bash
-python find_exact_end.py
-```
-
-### mitnick_probe.py
-
-Hacker-brain pattern exploration - magic numbers, primes, fibonacci, edge cases.
-
-```bash
-python mitnick_probe.py
-```
-
-## Verification Results
-
-- Sequential (0-13k): 13,000 pages tested, 77,766 files found
-- Random (to 1B): 500 pages tested, 0 new files
-- End zone (184Q backwards): 100 pages tested, 0 new files
-- Mitnick patterns: 150 pages tested, 0 new files
-
-Conclusion: All unique content is in pages 0-13,000. Higher pages are loops.
-
-## The 3 Inaccessible Files
-
-```
-https://www.justice.gov/epstein/files/DataSet%209/EFTA00326497.pdf
-https://www.justice.gov/epstein/files/DataSet%209/EFTA00326501.pdf
-https://www.justice.gov/epstein/files/DataSet%209/EFTA00534391.pdf
-```
-
-All return "An error was encountered while processing the file" when accessed.
-
-## Recommendations
-
-1. Use the torrent as primary source - DOJ website hides 85% of content
-2. Investigate the 3 inaccessible files - Evidence of potential removal
-3. Cross-reference with other datasets - Similar patterns may exist
-
-## License
-
-Public domain for accountability research. All source documents are from DOJ public releases.
 
 ---
 
-Analysis conducted: February 2-3, 2026
-Sequential pages scraped: 13,000
-Total DOJ requests: ~15,000+
-Pagination limit discovered: 184,467,440,737,095,516
+## Repository Contents
+
+### Analysis
+- [ADJACENT_FILE_ANALYSIS.md](ADJACENT_FILE_ANALYSIS.md) - Full investigation of the 3 missing files
+- [FINAL_REDDIT_POST.txt](FINAL_REDDIT_POST.txt) - Summary for distribution
+
+### Manifests
+- `manifests/doj_dataset9_manifest.txt` - 77,766 files from DOJ website
+- `manifests/torrent_manifest.txt` - 531,256 files from torrent
+- `manifests/doj_not_in_torrent.txt` - The 3 missing files
+- `manifests/pagination_index.json` - Full pagination structure
+
+### Scripts
+- `scraper/scrape_doj_manifest.py` - Sequential pagination scraper
+- `scraper/exploration_probe.py` - Random page exploration
+- `scraper/find_exact_end.py` - Binary search for pagination limit
+- `scraper/mitnick_probe.py` - Pattern-based exploration
+
+---
+
+## How to Verify
+
+1. **Check the missing files yourself** - Click the DOJ links above
+
+2. **Get the torrent** and confirm 326497, 326501, 534391 are absent
+
+3. **Read adjacent files** - Pull the EFTA numbers around the gaps to see the Shuliak travel chain
+
+4. **Run the scraper** - Reproduce our 77,766 file count from DOJ pagination:
+   ```bash
+   cd scraper
+   pip install -r requirements.txt
+   python scrape_doj_manifest.py
+   ```
+
+5. **Compare manifests** - Diff `doj_dataset9_manifest.txt` against `torrent_manifest.txt`
+
+---
+
+## Conclusion
+
+The three missing files are not random technical failures. They cluster around a single event, appear across two separate processing batches ~208,000 files apart, and include a gap immediately adjacent to Epstein's personal correspondence. The pattern is consistent with targeted removal.
+
+---
+
+*Analysis conducted: February 2-3, 2026*  
+*License: Unlicense (Public Domain)*
