@@ -14,7 +14,7 @@ These files are listed in DOJ pagination but cannot be downloaded:
 
 These files are NOT in any public torrent. This is potential evidence of document removal.
 
-### The Torrent is More Complete Than DOJ Website
+### The Torrent (87 GB) is More Complete Than DOJ Website
 
 - DOJ Website (13,000 pages scraped): 77,766 files
 - 86GB Torrent: 531,256 files
