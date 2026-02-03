@@ -1,0 +1,166 @@
+{
+  "search_time": "2026-02-02T22:10:15.134103",
+  "pages_tested": 20,
+  "results": [
+    {
+      "page_num": 10000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:19.640766"
+    },
+    {
+      "page_num": 100000,
+      "status": "ok",
+      "files": 50,
+      "classification": "LOOP",
+      "notes": "Same as page 22",
+      "timestamp": "2026-02-02T22:09:20.983857"
+    },
+    {
+      "page_num": 1000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:25.041726"
+    },
+    {
+      "page_num": 10000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:27.080027"
+    },
+    {
+      "page_num": 100000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:29.345160"
+    },
+    {
+      "page_num": 1000000000,
+      "status": "ok",
+      "files": 50,
+      "classification": "LOOP",
+      "notes": "Same as page 22",
+      "timestamp": "2026-02-02T22:09:30.795745"
+    },
+    {
+      "page_num": 2147483647,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:35.264240"
+    },
+    {
+      "page_num": 2147483648,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:37.827773"
+    },
+    {
+      "page_num": 4294967295,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:40.922118"
+    },
+    {
+      "page_num": 4294967296,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:44.623747"
+    },
+    {
+      "page_num": 10000000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:49.883076"
+    },
+    {
+      "page_num": 100000000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:52.436724"
+    },
+    {
+      "page_num": 1000000000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:55.984784"
+    },
+    {
+      "page_num": 10000000000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:09:59.695145"
+    },
+    {
+      "page_num": 100000000000000,
+      "status": "ok",
+      "files": 50,
+      "classification": "LOOP",
+      "notes": "Same as page 22",
+      "timestamp": "2026-02-02T22:10:00.907051"
+    },
+    {
+      "page_num": 1000000000000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:10:04.045666"
+    },
+    {
+      "page_num": 10000000000000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:10:08.254896"
+    },
+    {
+      "page_num": 100000000000000000,
+      "status": "ok",
+      "files": 4,
+      "classification": "LOOP",
+      "notes": "Same as page 10,005",
+      "timestamp": "2026-02-02T22:10:10.124168"
+    },
+    {
+      "page_num": 1000000000000000000,
+      "status": "http_503",
+      "files": 0,
+      "classification": "ERROR",
+      "notes": "http_503",
+      "timestamp": "2026-02-02T22:10:12.190778"
+    },
+    {
+      "page_num": 9223372036854775807,
+      "status": "http_503",
+      "files": 0,
+      "classification": "ERROR",
+      "notes": "http_503",
+      "timestamp": "2026-02-02T22:10:14.101025"
+    }
+  ]
+}

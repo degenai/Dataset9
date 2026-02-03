@@ -1,0 +1,15 @@
+# Files Listed on DOJ But Cannot Be Downloaded
+# Status: Returns HTML error page instead of PDF
+# Possible evidence of document removal/scrubbing
+# Date checked: February 2-3, 2026
+
+EFTA00326497.pdf
+EFTA00326501.pdf
+EFTA00534391.pdf
+
+# URLs attempted:
+# https://www.justice.gov/epstein/files/DataSet%209/EFTA00326497.pdf
+# https://www.justice.gov/epstein/files/DataSet%209/EFTA00326501.pdf
+# https://www.justice.gov/epstein/files/DataSet%209/EFTA00534391.pdf
+
+# Result: 53,572 byte HTML page (age verification/error) instead of PDF

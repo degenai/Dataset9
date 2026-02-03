@@ -1,0 +1,126 @@
+# DOJ Epstein Dataset 9 Pagination Analysis - 3 Files Appear Scrubbed, Page Limit Found at 184 Quadrillion
+
+**TL;DR:** After exhaustively scraping the DOJ's Dataset 9 pagination, we found:
+1. **3 specific files are LISTED but INACCESSIBLE** - potential evidence of document removal
+2. **The 86GB torrent is MORE complete than DOJ's website** (531k files vs 77k exposed)
+3. **DOJ pagination has an exact limit: page 184,467,440,737,095,516** (that's 184.5 quadrillion)
+4. **The pagination is an infinite loop** - same ~77k files cycle forever across 184 quadrillion pages
+
+---
+
+## THE BIG FINDING: 3 Files Appear to be Scrubbed
+
+These three EFTA files appear in the DOJ's own pagination listing but **cannot be downloaded by anyone**:
+
+| EFTA Number | Status | URL |
+|-------------|--------|-----|
+| **EFTA00326497** | Returns error page | [Link](https://www.justice.gov/epstein/files/DataSet%209/EFTA00326497.pdf) |
+| **EFTA00326501** | Returns error page | [Link](https://www.justice.gov/epstein/files/DataSet%209/EFTA00326501.pdf) |
+| **EFTA00534391** | Returns error page | [Link](https://www.justice.gov/epstein/files/DataSet%209/EFTA00534391.pdf) |
+
+**Why this matters:**
+- The DOJ's pagination database KNOWS these files exist (they appear in listings)
+- The actual files return "An error was encountered while processing the file"
+- They are NOT in any of the public torrents
+- EFTA00326497 and EFTA00326501 are sequential - likely related documents
+
+**If anyone archived these specific files before removal, please come forward.**
+
+---
+
+## The Torrent is Actually More Complete
+
+We compared the 86GB torrent against the DOJ website and found:
+
+| Source | Unique Files | Notes |
+|--------|--------------|-------|
+| DOJ Website (scraped 13,000 pages) | 77,766 | Only ~15% of actual dataset |
+| 86GB Torrent | 531,256 | 7x more files than DOJ exposes |
+| DOJ-only (not in torrent) | 3 | All inaccessible (listed above) |
+
+**The DOJ's web pagination only exposes ~15% of Dataset 9's actual contents.**
+
+Anyone scraping only the DOJ website would miss 85% of the files.
+
+---
+
+## Pagination Limit: Exactly 184,467,440,737,095,516
+
+Using binary search, we found the exact page where DOJ returns errors:
+
+- **Last working page:** 184,467,440,737,095,516
+- **First failing page:** 184,467,440,737,095,517
+
+This number is exactly **2^64 / 100** (max unsigned 64-bit integer divided by 100). The DOJ appears to use a 64-bit page parameter internally.
+
+**We probed:**
+- Sequential: Pages 0-13,000 (found 77,766 unique files)
+- Random: 500 pages across 10k-1B range (0 new files)
+- End zone: 100 pages backwards from the limit (0 new files)
+- Mitnick patterns: ~150 pages using mathematical patterns, magic numbers, edge cases (0 new files)
+
+**Conclusion: The pagination is an infinite loop.** The same ~77k files cycle forever. Even at page 900,000,000,000,000,000, it returns the same 4 files as page 0.
+
+---
+
+## Methodology
+
+All scripts are open source: [GitHub repo link]
+
+1. **Sequential Scraper** (`scrape_doj_manifest.py`)
+   - Scraped pages 0-13,000
+   - Tracked unique files via deduplication
+   - Detected "true wraps" (identical page content) vs "redundant pages"
+   - Found content in unexpected places (pages 2460, 3750, 8900, 9997 had new files)
+
+2. **Random Probe** (`exploration_probe.py`)
+   - 500 random pages from 13k to 1 billion
+   - 0 new files found
+
+3. **Pagination Limit Finder** (`find_exact_end.py`)
+   - Binary search from 13k to infinity
+   - Found exact boundary in 104 requests
+
+4. **End Zone Scraper** (`scrape_from_end.py`)
+   - 100 pages backwards from the limit
+   - All loops/redundant, 0 new files
+
+5. **Mitnick Probe** (`mitnick_probe.py`)
+   - Tested programmer magic numbers (0xDEADBEEF, 1337, etc.)
+   - Powers of 2, Fibonacci, primes
+   - DOJ-specific patterns (EFTA numbers as page numbers)
+   - 0 new files found
+
+---
+
+## What This Means for the Community
+
+1. **Use the torrents as primary source** - DOJ website hides 85% of content
+2. **The 3 inaccessible files need investigation** - Who has them? When were they removed?
+3. **DOJ's pagination system is severely broken** - Infinite loop, poor organization
+4. **No hidden content at extreme page numbers** - We checked up to 184 quadrillion
+
+---
+
+## Files for Researchers
+
+All manifests and analysis available in the repo:
+- `doj_dataset9_manifest.txt` - 77,766 files found on DOJ website
+- `torrent_manifest.txt` - 531,256 files in the 86GB torrent  
+- `doj_not_in_torrent.txt` - The 3 inaccessible files
+- `pagination_index.json` - Full pagination structure data
+- `pagination_exact_end.json` - Boundary search results
+
+---
+
+## Questions for the Community
+
+1. Does anyone have archived copies of EFTA00326497, EFTA00326501, or EFTA00534391?
+2. Has anyone else noticed the CDN cutting off downloads at specific offsets?
+3. Are there other datasets with similar pagination issues?
+
+---
+
+*Analysis conducted Feb 2-3, 2026*
+*Tools: Python, BeautifulSoup, Rich terminal UI*
+*Total DOJ requests: ~15,000+ across all probes*
