@@ -1,0 +1,48 @@
+# API Keys - DO NOT COMMIT
+deepseekkey.txt
+*.key
+*.secret
+
+# Checkpoint files (large, regenerable)
+manifests/scraper_checkpoint.json
+
+# Downloaded content (too large for git)
+downloads/
+rDataHoarderMagnet/
+*.tar.xz
+*.tar
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.eggs/
+*.egg-info/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.temp
