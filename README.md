@@ -4,7 +4,7 @@
 
 ## Background
 
-The DOJ removed ZIP downloads but individual PDFs remain accessible. Existing torrents are incomplete (~86 GiB of estimated 150-250+ GiB). This project identifies gaps, scrapes missing files, and packages for redistribution.
+The DOJ removed (Has glitched downloads for most) ZIP downloads but individual PDFs remain accessible. Existing torrents are incomplete (~86 GiB of estimated 150-250+ GiB). This project identifies gaps, scrapes missing files, and packages for redistribution.
 
 ## Critical Discovery (Feb 2, 2026)
 
