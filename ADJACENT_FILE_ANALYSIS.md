@@ -104,8 +104,6 @@ Epstein recommended a novel with a sympathetic pedophile protagonist **before it
 
 4. **Is this April 2016 trip unique?** Are there other Shuliak travel records in the corpus? Do they show similar gaps? A pattern across multiple trips would strengthen the case for targeted removal.
 
-5. **What other communications exist from jeevacation@gmail.com?** Grepping the corpus for Epstein's personal email address may reveal additional context.
-
 ---
 
 ## How to Verify
@@ -125,7 +123,7 @@ This analysis can be independently reproduced:
 
 4. **Compare redacted vs unredacted batches**: Pull files from both 326xxx and 534xxx ranges for the same email chain. Confirm the redaction patterns and the presence of gaps in both.
 
-5. **Run your own grep**: Search the corpus for "QWURMO" (booking reference), "Shuliak", "jeevacation", "Colapinto", and the missing EFTA numbers to find any references.
+5. **Run your own grep**: Search the corpus for "QWURMO" (booking reference), "Shuliak", "Colapinto", and the missing EFTA numbers to find any references.
 
 **Torrent verification**: Compare your file listing against the manifest in this repository (`manifests/torrent_manifest.txt`).
 
@@ -165,9 +163,25 @@ This analysis can be independently reproduced:
 
 ---
 
+## Update (Feb 6, 2026): "No Images Produced" Files
+
+Community member betterl8thannvr identified that the 3 removed files are **"No Images Produced"** files. From their understanding, this indicates that the PDF is empty but there is a corresponding **video** somewhere in the dataset. This is consistent with DOJ document production conventions where video evidence is catalogued with a placeholder PDF.
+
+This changes the interpretation: the files were not necessarily scrubbed text documents, but placeholder PDFs pointing to video content. The key questions become:
+
+1. **Where are the corresponding videos?** Dataset 10 contains files with video extensions that may correspond to these EFTA numbers.
+2. **Why are the placeholder PDFs inaccessible?** Even "No Images Produced" PDFs should still be servable -- their absence from both the DOJ website and the torrent remains unexplained.
+3. **What video content do they reference?** Given the adjacent documents relate to Shuliak's St. Thomas travel and Epstein's personal correspondence, the video content may be significant.
+
+The clustering pattern across two processing batches remains noteworthy regardless of file type.
+
+---
+
 ## Conclusion
 
 The three missing files are not random. They cluster around a single event (Shuliak's April 2016 St. Thomas departure), appear across two separate processing batches ~208,000 files apart, and include a gap immediately adjacent to Epstein's personal correspondence. The pattern is consistent with targeted removal rather than technical corruption.
+
+**Note**: These files have been identified as "No Images Produced" placeholders for video content (see update above). The absence of even the placeholder PDFs remains unexplained.
 
 ---
 

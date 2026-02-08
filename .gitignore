@@ -5,6 +5,9 @@ deepseekkey.txt
 
 # Checkpoint files (large, regenerable)
 manifests/scraper_checkpoint.json
+chapter1/manifests/scraper_checkpoint.json
+chapter1/probe_results/probe_checkpoint.json
+chapter2/manifests/ch2_checkpoint.json
 
 # Downloaded content (too large for git)
 downloads/

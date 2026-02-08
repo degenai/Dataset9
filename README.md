@@ -1,5 +1,7 @@
 # Epstein DOJ Dataset 9 - Evidence of Targeted Document Removal
 
+**LAST UPDATED: CHAPTER 2 - 2/8/2026**
+
 ## Key Finding: Three Files Removed from Two Processing Batches
 
 Three files are listed in DOJ's Dataset 9 pagination but cannot be accessed from either the DOJ website or the 86GB public torrent. Adjacent file analysis reveals:
@@ -35,7 +37,9 @@ Try them yourself:
 
 ---
 
-## Secondary Finding: DOJ Website Hides 85% of Dataset
+## Chapter 1 Findings (February 2-3, 2026)
+
+### Secondary Finding: DOJ Website Hides 85% of Dataset
 
 | Source | Files | Coverage |
 |--------|-------|----------|
@@ -48,7 +52,7 @@ Anyone relying solely on the DOJ website is missing 85% of Dataset 9.
 
 ---
 
-## EFTA Distribution by Page Range
+### EFTA Distribution by Page Range
 
 ```
 Page Range    Min EFTA       Max EFTA       New Files
@@ -85,19 +89,30 @@ TOTAL FILES IN TORRENT: 531,256
 
 ### Analysis
 - [ADJACENT_FILE_ANALYSIS.md](ADJACENT_FILE_ANALYSIS.md) - Full investigation of the 3 missing files
+- [chapter2/CH2_FINDINGS.md](chapter2/CH2_FINDINGS.md) - Chapter 2 re-investigation results
 - [FINAL_REDDIT_POST.txt](FINAL_REDDIT_POST.txt) - Summary for distribution
 
-### Manifests
-- `manifests/doj_dataset9_manifest.txt` - 77,766 files from DOJ website
-- `manifests/torrent_manifest.txt` - 531,256 files from torrent
-- `manifests/doj_not_in_torrent.txt` - The 3 missing files
-- `manifests/pagination_index.json` - Full pagination structure
+### Chapter 1 Snapshot (Feb 2-3)
+- `chapter1/manifests/` - Ch1 scrape outputs (77,766 files)
+- `chapter1/probe_results/` - Extended exploration results
+- `chapter1/SNAPSHOT_NOTES.md` - Ch1 summary
+
+### Chapter 2 Data (Feb 6-7)
+- `chapter2/manifests/` - Ch2 scrape outputs (267,763 files)
+- `chapter2/manifests/new_in_ch2.txt` - 244,025 files new vs Ch1
+- `chapter2/manifests/removed_since_ch1.txt` - 54,028 files gone from Ch1
+- `chapter2/manifests/doj_not_in_torrent.txt` - 27 DOJ-only files
+- `chapter2/negative_pages/` - Negative page probe results
 
 ### Scripts
-- `scraper/scrape_doj_manifest.py` - Sequential pagination scraper
-- `scraper/exploration_probe.py` - Random page exploration
-- `scraper/find_exact_end.py` - Binary search for pagination limit
-- `scraper/mitnick_probe.py` - Pattern-based exploration
+- `scraper/scrape_doj_manifest.py` - Ch1 sequential pagination scraper
+- `scraper/ch2_scrape.py` - Ch2 re-scrape with auto-diff
+- `scraper/ch2_limit_probe.py` - Pagination boundary search (positive + negative)
+- `scraper/efta_distribution.py` - EFTA number distribution analysis
+- `scraper/page_zero.py` - Lightweight page 0 check
+- `scraper/find_exact_end.py` - Ch1 binary search for pagination limit
+- `scraper/exploration_probe.py` - Ch1 random page exploration
+- `scraper/mitnick_probe.py` - Ch1 pattern-based exploration
 
 ---
 
@@ -126,5 +141,36 @@ The three missing files are not random technical failures. They cluster around a
 
 ---
 
-*Analysis conducted: February 2-3, 2026*  
+## Chapter 2 Findings (February 6-8, 2026)
+
+Full re-scrape of 13,000 pages revealed the DOJ pagination has **dramatically changed**. See [chapter2/CH2_FINDINGS.md](chapter2/CH2_FINDINGS.md) for complete analysis.
+
+### Key Results
+
+| Metric | Ch1 (Feb 2-3) | Ch2 (Feb 6-7) |
+|--------|---------------|---------------|
+| Unique files found | 77,766 | 267,763 |
+| DOJ coverage of torrent | ~15% | ~50% |
+| Files in both scrapes | — | 23,738 |
+| DOJ-only files (not in torrent) | 3 | **27** |
+
+- **Pagination reshuffled**: Only 23,738 files appear in both scrapes. Ch1 was concentrated in EFTA 0-450K; Ch2 shifted to 500K-1.2M.
+- **27 DOJ-only files**: Up from 3 in Ch1. These files appear on the DOJ website but not in the torrent.
+- **Negative pages investigated**: Tested to -10^99. All return page 22 content. No hidden files.
+- **Positive limit unchanged**: Still 184,467,440,737,095,516 (2^64/100).
+- **Original 3 missing files**: EFTA00534391 persists in Ch2. EFTA00326497 and EFTA00326501 dropped from pagination. All 3 identified as "No Images Produced" video placeholders.
+
+### Critical Discovery: Pagination Shifts Mid-Scan
+
+Post-scan verification revealed **11 out of 20 sample pages changed content** during the 16-hour scrape. The DOJ pagination is not just unstable between days -- it reshuffles while a scan is running. This means long-running sequential scrapes cannot be internally consistent. See [CH2_FINDINGS.md](chapter2/CH2_FINDINGS.md#finding-6-pagination-shifts-mid-scan) for the full change check results.
+
+### Chapter 3 (planned)
+
+Characterize pagination shift frequency, build a pagination-aware scraper with mid-scan stability checks, and investigate the 39 DOJ-only files.
+
+---
+
+*Chapter 1 analysis conducted: February 2-3, 2026*  
+*Chapter 2 analysis conducted: February 6-8, 2026*  
+*Last updated: February 8, 2026*  
 *License: Unlicense (Public Domain)*

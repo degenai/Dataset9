@@ -726,10 +726,23 @@ def main():
         default=None,
         help="Stop after N consecutive pages with no new files (default: disabled)"
     )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default=None,
+        help="Output directory for manifests (default: manifests/)"
+    )
     args = parser.parse_args()
     
-    global CONSECUTIVE_EMPTY_THRESHOLD
+    global CONSECUTIVE_EMPTY_THRESHOLD, MANIFESTS_DIR, CHECKPOINT_FILE
     MAX_PAGE = args.max_page
+    
+    # Handle custom output directory
+    if args.output_dir:
+        MANIFESTS_DIR = Path(args.output_dir)
+        CHECKPOINT_FILE = MANIFESTS_DIR / "scraper_checkpoint.json"
+        MANIFESTS_DIR.mkdir(parents=True, exist_ok=True)
+        console.print(f"[cyan]Output directory: {MANIFESTS_DIR}[/cyan]")
     
     # Handle stop condition
     if args.no_stop:

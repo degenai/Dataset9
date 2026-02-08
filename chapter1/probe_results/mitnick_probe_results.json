@@ -1,0 +1,1456 @@
+{
+  "probe_time": "2026-02-02T22:37:25.235598",
+  "total_probes": 173,
+  "baseline_files": 77766,
+  "new_files_found": 0,
+  "new_files_list": [],
+  "discoveries": [],
+  "category_stats": {
+    "fibonacci": {
+      "probed": 15,
+      "ok": 15,
+      "new_files": 0
+    },
+    "doj": {
+      "probed": 26,
+      "ok": 26,
+      "new_files": 0
+    },
+    "chaos": {
+      "probed": 12,
+      "ok": 12,
+      "new_files": 0
+    },
+    "tranche_mult": {
+      "probed": 26,
+      "ok": 26,
+      "new_files": 0
+    },
+    "magic": {
+      "probed": 12,
+      "ok": 12,
+      "new_files": 0
+    },
+    "power2": {
+      "probed": 30,
+      "ok": 30,
+      "new_files": 0
+    },
+    "efta": {
+      "probed": 7,
+      "ok": 7,
+      "new_files": 0
+    },
+    "prime": {
+      "probed": 10,
+      "ok": 10,
+      "new_files": 0
+    },
+    "random": {
+      "probed": 20,
+      "ok": 20,
+      "new_files": 0
+    },
+    "date": {
+      "probed": 5,
+      "ok": 5,
+      "new_files": 0
+    },
+    "boundary": {
+      "probed": 2,
+      "ok": 2,
+      "new_files": 0
+    },
+    "abyss": {
+      "probed": 8,
+      "ok": 8,
+      "new_files": 0
+    }
+  },
+  "results": [
+    {
+      "page": 17711,
+      "category": "fibonacci",
+      "reason": "Fib(21)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 20000,
+      "category": "doj",
+      "reason": "DataSet 2 \u00d7 10000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 22222,
+      "category": "chaos",
+      "reason": "All twos",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 24600,
+      "category": "tranche_mult",
+      "reason": "Tranche discovered \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 28657,
+      "category": "fibonacci",
+      "reason": "Fib(22)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 30000,
+      "category": "doj",
+      "reason": "DataSet 3 \u00d7 10000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 31337,
+      "category": "magic",
+      "reason": "ELEET - elite hacker",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 32767,
+      "category": "power2",
+      "reason": "2^15 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 32768,
+      "category": "power2",
+      "reason": "2^15",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 32769,
+      "category": "power2",
+      "reason": "2^15 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 34500,
+      "category": "tranche_mult",
+      "reason": "New files found \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 37500,
+      "category": "tranche_mult",
+      "reason": "+195 new files \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 39025,
+      "category": "efta",
+      "reason": "EFTA number as page",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 40000,
+      "category": "doj",
+      "reason": "DataSet 4 \u00d7 10000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 41000,
+      "category": "tranche_mult",
+      "reason": "+38 new files \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 46368,
+      "category": "fibonacci",
+      "reason": "Fib(23)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 50000,
+      "category": "doj",
+      "reason": "DataSet 5 \u00d7 10000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 54321,
+      "category": "chaos",
+      "reason": "Reverse sequential",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 60000,
+      "category": "doj",
+      "reason": "DataSet 6 \u00d7 10000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 65535,
+      "category": "power2",
+      "reason": "2^16 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 65536,
+      "category": "power2",
+      "reason": "2^16",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 65537,
+      "category": "power2",
+      "reason": "2^16 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 70000,
+      "category": "doj",
+      "reason": "DataSet 7 \u00d7 10000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 75025,
+      "category": "fibonacci",
+      "reason": "Fib(24)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 76600,
+      "category": "tranche_mult",
+      "reason": "First true wrap detected \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 80000,
+      "category": "doj",
+      "reason": "DataSet 8 \u00d7 10000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 80085,
+      "category": "magic",
+      "reason": "BOOBS - juvenile but checked",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 89000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 90000,
+      "category": "doj",
+      "reason": "DataSet 9 \u00d7 10000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 92000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 98500,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 99970,
+      "category": "tranche_mult",
+      "reason": "+36 files near 10k \u00d7 10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 99999,
+      "category": "chaos",
+      "reason": "All nines",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 100000,
+      "category": "doj",
+      "reason": "DataSet 1 \u00d7 100000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 100003,
+      "category": "prime",
+      "reason": "Prime 100003",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 100019,
+      "category": "prime",
+      "reason": "Prime 100019",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 100043,
+      "category": "prime",
+      "reason": "Prime 100043",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 100049,
+      "category": "prime",
+      "reason": "Prime 100049",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 100057,
+      "category": "prime",
+      "reason": "Prime 100057",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 110000,
+      "category": "doj",
+      "reason": "DataSet 11 \u00d7 10000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 111111,
+      "category": "chaos",
+      "reason": "Six ones",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 120000,
+      "category": "doj",
+      "reason": "DataSet 12 \u00d7 10000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 121393,
+      "category": "fibonacci",
+      "reason": "Fib(25)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 123456,
+      "category": "chaos",
+      "reason": "Sequential 6",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 130000,
+      "category": "doj",
+      "reason": "DataSet 13 \u00d7 10000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 131071,
+      "category": "power2",
+      "reason": "2^17 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 131072,
+      "category": "power2",
+      "reason": "2^17",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 131073,
+      "category": "power2",
+      "reason": "2^17 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 140000,
+      "category": "doj",
+      "reason": "DataSet 14 \u00d7 10000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 186736,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 196418,
+      "category": "fibonacci",
+      "reason": "Fib(26)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 200000,
+      "category": "doj",
+      "reason": "DataSet 2 \u00d7 100000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 246000,
+      "category": "tranche_mult",
+      "reason": "Tranche discovered \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 262143,
+      "category": "power2",
+      "reason": "2^18 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 262144,
+      "category": "power2",
+      "reason": "2^18",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 262145,
+      "category": "power2",
+      "reason": "2^18 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 267311,
+      "category": "efta",
+      "reason": "EFTA number as page",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 300000,
+      "category": "doj",
+      "reason": "DataSet 3 \u00d7 100000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 317811,
+      "category": "fibonacci",
+      "reason": "Fib(27)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 326497,
+      "category": "efta",
+      "reason": "EFTA number as page",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 326501,
+      "category": "efta",
+      "reason": "EFTA number as page",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 335577,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 337032,
+      "category": "efta",
+      "reason": "EFTA number as page",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 345000,
+      "category": "tranche_mult",
+      "reason": "New files found \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 361955,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 375000,
+      "category": "tranche_mult",
+      "reason": "+195 new files \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 390326,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 396620,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 400000,
+      "category": "doj",
+      "reason": "DataSet 4 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 410000,
+      "category": "tranche_mult",
+      "reason": "+38 new files \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 415344,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 423572,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 500000,
+      "category": "doj",
+      "reason": "DataSet 5 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 514229,
+      "category": "fibonacci",
+      "reason": "Fib(28)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 524287,
+      "category": "power2",
+      "reason": "2^19 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 524288,
+      "category": "power2",
+      "reason": "2^19",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 524289,
+      "category": "power2",
+      "reason": "2^19 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 534391,
+      "category": "efta",
+      "reason": "EFTA number as page",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 539216,
+      "category": "efta",
+      "reason": "EFTA number as page",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 572170,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 600000,
+      "category": "doj",
+      "reason": "DataSet 6 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 611715,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 627243,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 654321,
+      "category": "chaos",
+      "reason": "Reverse 6",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 660761,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 678714,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 700000,
+      "category": "doj",
+      "reason": "DataSet 7 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 743984,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 757364,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 766000,
+      "category": "tranche_mult",
+      "reason": "First true wrap detected \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 780448,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 800000,
+      "category": "doj",
+      "reason": "DataSet 8 \u00d7 100000",
+      "status": "OK",
+      "files": 50,
+      "new_files": 0
+    },
+    {
+      "page": 825856,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 832040,
+      "category": "fibonacci",
+      "reason": "Fib(29)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 840970,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 877419,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 890000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 900000,
+      "category": "doj",
+      "reason": "DataSet 9 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 920000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 979501,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 983495,
+      "category": "random",
+      "reason": "Random probe",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 985000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 999700,
+      "category": "tranche_mult",
+      "reason": "+36 files near 10k \u00d7 100",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 999999,
+      "category": "chaos",
+      "reason": "Six nines",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1000000,
+      "category": "doj",
+      "reason": "DataSet 10 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1000003,
+      "category": "prime",
+      "reason": "Prime 1000003",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1000033,
+      "category": "prime",
+      "reason": "Prime 1000033",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1000037,
+      "category": "prime",
+      "reason": "Prime 1000037",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1048575,
+      "category": "power2",
+      "reason": "2^20 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1048576,
+      "category": "power2",
+      "reason": "2^20",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1048577,
+      "category": "power2",
+      "reason": "2^20 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1100000,
+      "category": "doj",
+      "reason": "DataSet 11 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1111111,
+      "category": "chaos",
+      "reason": "Seven ones",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1200000,
+      "category": "doj",
+      "reason": "DataSet 12 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1234567,
+      "category": "chaos",
+      "reason": "Sequential 7",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1300000,
+      "category": "doj",
+      "reason": "DataSet 13 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1346269,
+      "category": "fibonacci",
+      "reason": "Fib(30)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1400000,
+      "category": "doj",
+      "reason": "DataSet 14 \u00d7 100000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2097151,
+      "category": "power2",
+      "reason": "2^21 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2097152,
+      "category": "power2",
+      "reason": "2^21",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2097153,
+      "category": "power2",
+      "reason": "2^21 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2178309,
+      "category": "fibonacci",
+      "reason": "Fib(31)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2460000,
+      "category": "tranche_mult",
+      "reason": "Tranche discovered \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3450000,
+      "category": "tranche_mult",
+      "reason": "New files found \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3524578,
+      "category": "fibonacci",
+      "reason": "Fib(32)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3750000,
+      "category": "tranche_mult",
+      "reason": "+195 new files \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 4100000,
+      "category": "tranche_mult",
+      "reason": "+38 new files \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 4194303,
+      "category": "power2",
+      "reason": "2^22 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 4194304,
+      "category": "power2",
+      "reason": "2^22",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 4194305,
+      "category": "power2",
+      "reason": "2^22 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 5318008,
+      "category": "magic",
+      "reason": "BOOBIES upside down",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 5702887,
+      "category": "fibonacci",
+      "reason": "Fib(33)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 7654321,
+      "category": "chaos",
+      "reason": "Reverse 7",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 8008135,
+      "category": "magic",
+      "reason": "BOOBIES - ditto",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 8388607,
+      "category": "power2",
+      "reason": "2^23 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 8388608,
+      "category": "power2",
+      "reason": "2^23",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 8388609,
+      "category": "power2",
+      "reason": "2^23 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 8900000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 9200000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 9227465,
+      "category": "fibonacci",
+      "reason": "Fib(34)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 9850000,
+      "category": "tranche_mult",
+      "reason": "Late content \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 9997000,
+      "category": "tranche_mult",
+      "reason": "+36 files near 10k \u00d7 1000",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 9999999,
+      "category": "chaos",
+      "reason": "Seven nines",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 10000000,
+      "category": "chaos",
+      "reason": "Round 10M",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 10000019,
+      "category": "prime",
+      "reason": "Prime 10000019",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 10000079,
+      "category": "prime",
+      "reason": "Prime 10000079",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 12648430,
+      "category": "magic",
+      "reason": "COFFEE - programmer fuel",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 14930352,
+      "category": "fibonacci",
+      "reason": "Fib(35)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 16777215,
+      "category": "power2",
+      "reason": "2^24 - 1 (Mersenne)",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 16777216,
+      "category": "power2",
+      "reason": "2^24",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 16777217,
+      "category": "power2",
+      "reason": "2^24 + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 19530120,
+      "category": "date",
+      "reason": "Epstein birth 1953-01-20",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 20060630,
+      "category": "date",
+      "reason": "First arrest 2006-06-30",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 20190706,
+      "category": "date",
+      "reason": "Second arrest 2019-07-06",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 20190810,
+      "category": "date",
+      "reason": "Epstein death date 2019-08-10",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 20200702,
+      "category": "date",
+      "reason": "Maxwell arrest 2020-07-02",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2147483647,
+      "category": "boundary",
+      "reason": "Max signed 32-bit",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2147483648,
+      "category": "boundary",
+      "reason": "Max signed 32-bit + 1",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 2343432205,
+      "category": "magic",
+      "reason": "8BADFOOD - iOS watchdog kill",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3131961357,
+      "category": "magic",
+      "reason": "BAADFOOD - Windows heap debug",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3135023902,
+      "category": "magic",
+      "reason": "BADCABLE - network debug",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3405691582,
+      "category": "magic",
+      "reason": "CAFEBABE - Java class file magic",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3735928559,
+      "category": "magic",
+      "reason": "DEADBEEF - classic debug marker",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 3735929054,
+      "category": "magic",
+      "reason": "DEADCODE - dead code marker",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 4277009102,
+      "category": "magic",
+      "reason": "FEEDFACE - Mach-O magic",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 1844674407370955,
+      "category": "abyss",
+      "reason": "Hundredth to end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 18446744073709551,
+      "category": "abyss",
+      "reason": "Tenth to end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 61489146912365172,
+      "category": "abyss",
+      "reason": "Third to end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 92233720368547758,
+      "category": "abyss",
+      "reason": "Halfway to end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 184467440736095516,
+      "category": "abyss",
+      "reason": "1M before end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 184467440736995516,
+      "category": "abyss",
+      "reason": "100k before end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 184467440737085516,
+      "category": "abyss",
+      "reason": "10k before end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    },
+    {
+      "page": 184467440737094516,
+      "category": "abyss",
+      "reason": "1000 before end",
+      "status": "OK",
+      "files": 4,
+      "new_files": 0
+    }
+  ]
+}
