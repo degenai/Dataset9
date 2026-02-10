@@ -15,6 +15,7 @@ Date: February 2026 - Chapter 2
 
 import hashlib
 import json
+import os
 import random
 import re
 import sys
@@ -36,6 +37,7 @@ from rich import box
 BASE_URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files"
 TIMEOUT = 15
 DELAY = 0.8
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 SKIP_BELOW = 50_000  # Sequential scrape covers 0-50K
 
 END = 184_467_440_737_095_516  # Known positive limit
@@ -226,7 +228,7 @@ def fetch_page(page: int):
     """Returns (files: list | None, status: str)."""
     url = f"{BASE_URL}?page={page}"
     try:
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (DS9-Mitnick-Ch2)"}, timeout=TIMEOUT)
+        r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
         if r.status_code == 404:
             return None, "404"
         if r.status_code != 200:

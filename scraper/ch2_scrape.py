@@ -16,6 +16,7 @@ Date: February 2026 - Chapter 2
 
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -40,6 +41,7 @@ DELAY = 1.0
 TIMEOUT = 15
 RETRIES = 3
 CHECKPOINT_EVERY = 50
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 PROJECT_ROOT = Path(__file__).parent.parent
 OUT = PROJECT_ROOT / "chapter2" / "manifests"
@@ -57,7 +59,7 @@ def fetch_page(page: int) -> tuple:
     url = f"{BASE_URL}?page={page}"
     for attempt in range(1, RETRIES + 1):
         try:
-            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (DS9-Ch2)"}, timeout=TIMEOUT)
+            r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
             if r.status_code == 404:
                 return None, "404"
             if r.status_code != 200:

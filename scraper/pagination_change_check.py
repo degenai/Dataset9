@@ -14,6 +14,7 @@ Date: February 2026 - Chapter 2
 
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -28,6 +29,7 @@ from rich import box
 BASE_URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files"
 TIMEOUT = 15
 DELAY = 0.8
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 PROJECT_ROOT = Path(__file__).parent.parent
 CHECKPOINT = PROJECT_ROOT / "chapter2" / "manifests" / "ch2_checkpoint.json"
@@ -42,7 +44,7 @@ def fetch_hash(page: int) -> tuple:
     """Fetch a page, return (content_hash, file_count, status)."""
     url = f"{BASE_URL}?page={page}"
     try:
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (DS9-PagCheck)"}, timeout=TIMEOUT)
+        r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
         if r.status_code != 200:
             return None, 0, f"HTTP_{r.status_code}"
         soup = BeautifulSoup(r.text, "lxml")

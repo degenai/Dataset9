@@ -63,6 +63,7 @@ MAX_RETRIES = 3
 BACKOFF_MULTIPLIER = 2
 MIN_PDF_SIZE = 1024  # Minimum valid PDF size (1KB)
 PDF_MAGIC = b'%PDF'
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -226,7 +227,7 @@ async def run_downloads(files_to_download: List[str], concurrency: int = DEFAULT
     async with aiohttp.ClientSession(
         connector=connector,
         headers={
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) DataSet9-Archival-Project/1.0',
+            'User-Agent': USER_AGENT,
             'Accept': 'application/pdf,*/*',
         }
     ) as session:

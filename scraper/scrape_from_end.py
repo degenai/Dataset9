@@ -14,6 +14,7 @@ Date: February 2026
 
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -38,6 +39,7 @@ from rich import box
 BASE_URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files"
 REQUEST_TIMEOUT = 30
 REQUEST_DELAY = 1.0
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 # The discovered end point
 PAGINATION_END = 184_467_440_737_095_516
@@ -87,7 +89,7 @@ def fetch_page(page_num: int) -> tuple[Optional[List[str]], str]:
     try:
         resp = requests.get(
             url,
-            headers={'User-Agent': 'Mozilla/5.0 (DataSet9 Research Project)'},
+            headers={'User-Agent': USER_AGENT},
             timeout=REQUEST_TIMEOUT
         )
         
