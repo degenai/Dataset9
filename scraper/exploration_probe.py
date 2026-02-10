@@ -24,6 +24,7 @@ Date: February 2026
 import argparse
 import hashlib
 import json
+import os
 import random
 import re
 import sys
@@ -58,6 +59,7 @@ BASE_URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files"
 REQUEST_DELAY = 1.2  # Seconds between requests
 REQUEST_TIMEOUT = 30
 MAX_RETRIES = 3
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -236,7 +238,7 @@ def fetch_page(page_num: int) -> Optional[List[str]]:
         try:
             resp = requests.get(
                 url,
-                headers={'User-Agent': 'Mozilla/5.0 (DataSet9 Research Project)'},
+                headers={'User-Agent': USER_AGENT},
                 timeout=REQUEST_TIMEOUT
             )
             

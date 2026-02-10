@@ -14,6 +14,7 @@ Date: February 2026
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -39,6 +40,7 @@ from rich import box
 BASE_URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files"
 REQUEST_TIMEOUT = 30
 KNOWN_WORKING = 13000  # We know this works from sequential scrape
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -145,7 +147,7 @@ def test_page(page_num: int) -> Tuple[bool, str, int]:
     try:
         resp = requests.get(
             url,
-            headers={'User-Agent': 'Mozilla/5.0 (DataSet9 Research Project)'},
+            headers={'User-Agent': USER_AGENT},
             timeout=REQUEST_TIMEOUT
         )
         

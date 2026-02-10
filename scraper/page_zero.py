@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Page 0 check. That's it."""
 
-import re, sys, requests
+import os, re, sys, requests
 from bs4 import BeautifulSoup
 
 URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files?page=0"
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 try:
-    r = requests.get(URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+    r = requests.get(URL, headers={"User-Agent": USER_AGENT}, timeout=30)
     print(f"Status: {r.status_code}")
     if r.status_code != 200:
         sys.exit(1)

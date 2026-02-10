@@ -17,6 +17,7 @@ Date: February 2026 - Chapter 2
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -37,6 +38,7 @@ from rich import box
 BASE_URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files"
 REQUEST_TIMEOUT = 15
 DELAY = 0.8
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 
 # Chapter 1 findings
 CH1_POSITIVE_LIMIT = 184_467_440_737_095_516  # 2^64 / 100
@@ -61,7 +63,7 @@ def test_page(page_num: int) -> tuple:
     try:
         resp = requests.get(
             url,
-            headers={'User-Agent': 'Mozilla/5.0 (DataSet9 Ch2 Probe)'},
+            headers={'User-Agent': USER_AGENT},
             timeout=REQUEST_TIMEOUT
         )
         if resp.status_code == 404:

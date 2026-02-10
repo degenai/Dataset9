@@ -29,6 +29,7 @@ Date: February 2026
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -59,6 +60,7 @@ from rich import box
 
 BASE_URL = "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files"
 MAX_PAGE = 10000  # Scrape through this page number (extended for thorough coverage)
+USER_AGENT = os.getenv("DATASET9_USER_AGENT", "Mozilla/5.0 (compatible; DataSet9-Bot/1.0; +https://github.com/DataSet9-Project)")
 CHECKPOINT_INTERVAL = 50  # Save checkpoint every N pages
 REQUEST_DELAY = 1.0  # Seconds between requests (be polite to DOJ)
 REQUEST_TIMEOUT = 30  # Seconds
@@ -549,7 +551,7 @@ def run_scraper(resume: bool = False):
     # Create session with headers
     session = requests.Session()
     session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) DataSet9-Archival-Project/1.0',
+        'User-Agent': USER_AGENT,
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     })
     
